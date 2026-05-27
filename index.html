@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   https://natstore34.netlify.app
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="sell.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Nat Store | ទិញទូរស័ព្ទ iPhone និងគ្រឿងបន្លាស់ទំនើបៗ</title>
+    
+    <meta name="description" content="Nat Store មានលក់ទូរស័ព្ទ iPhone គ្រប់ម៉ូដែល ចាប់ពី iPhone 11 ដល់ iPhone 15 Pro Max ក្នុងតម្លៃសមរម្យ និងមានគុណភាពខ្ពស់។">
+    
+    <meta name="keywords" content="Nat Store, ទិញ iPhone, iPhone 15 Pro Max, iPhone តម្លៃថោក">
+</head>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo"><i class="fas fa-bolt"></i> Nat Store</a>
+            <div class="nav-actions">
+    <button id="admin-menu-btn" title="Admin Panel" style="background:none; border:none; color:var(--text-color); font-size:2.15rem; cursor:pointer;">
+        <i class="fas fa-user-cog"><h1 style="font-size: 15px;"> Edite Product</h1></i>
+    </button>
+
+
+   
+</div>
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="cart-icon" id="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content fade-in">
+            <h1>All Product is hare</h1>
+            <p>wellcome to Nat Store</p>
+            <a href="#products" class="btn">Shop Collection</a>
+        </div>
+    </header>
+
+    <main class="container" id="products">
+        <h2 class="section-title" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">All Products</h2>
+        <div class="product-grid">
+            
+            <div class="product-card scroll-animate">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80" alt="Wireless Headphones">
+                </div>
+                <div class="product-info">
+                    <h3>AeroSound Max</h3>
+                    <p class="price">$299.00</p>
+                    <button class="btn add-to-cart" data-id="1" data-name="AeroSound Max" data-price="299.00">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card scroll-animate">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500&q=80" alt="Mechanical Keyboard">
+                </div>
+                <div class="product-info">
+                    <h3>CyberClick Pro</h3>
+                    <p class="price">$159.00</p>
+                    <button class="btn add-to-cart" data-id="2" data-name="CyberClick Pro" data-price="159.00">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card scroll-animate">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80" alt="Minimalist Watch">
+                </div>
+                <div class="product-info">
+                    <h3>Chronos Minimalist</h3>
+                    <p class="price">$199.00</p>
+                    <button class="btn add-to-cart" data-id="3" data-name="Chronos Minimalist" data-price="199.00">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-msg">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-price">Total: $<span id="cart-total">0.00</span></div>
+            <button class="btn checkout-btn" id="checkout-btn">Proceed to Payment</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="payment-modal">
+        <div class="modal">
+            <button class="close-modal" id="close-modal"><i class="fas fa-times"></i></button>
+            <h3>Secure Checkout</h3>
+            <form id="payment-form">
+                <div class="input-group">
+                    <label>Cardholder Name</label>
+                    <input type="text" required placeholder="John Doe">
+                </div>
+                <div class="input-group">
+                    <label>Card Number</label>
+                    <input type="text" required placeholder="1234 5678 9101 1121" maxlength="19">
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label>Expiry Date</label>
+                        <input type="text" required placeholder="MM/YY" maxlength="5">
+                    </div>
+                    <div class="input-group">
+                        <label>CVV</label>
+                        <input type="password" required placeholder="123" maxlength="3">
+                    </div>
+                </div>
+                <button type="submit" class="btn submit-pay-btn" id="pay-submit-btn">Pay Now</button>
+            </form>
+            <div id="payment-success" class="payment-success-msg hidden">
+                <i class="fas fa-check-circle"></i>
+                <h4>Payment Successful!</h4>
+                <p>Thank you for your purchase. Your order is on its way.</p>
+            </div>
+        </div>
+    </div><div class="admin-sidebar" id="admin-sidebar">
+    <div class="admin-sidebar-header">
+        <h3><i class="fas fa-sliders-h"></i> Admin Control Panel</h3>
+        <button id="close-admin"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="admin-sidebar-body">
+        
+        <div class="admin-sidebar-card">
+            <h4><i class="fas fa-plus-circle"></i> Add New Product</h4>
+            <form id="add-product-form" class="add-product-form">
+                <div class="input-group">
+                    <label>Product Name</label>
+                    <input type="text" id="new-p-name" required placeholder="e.g. AeroSound Max">
+                </div>
+                <div class="input-group">
+                    <label>Price ($)</label>
+                    <input type="number" id="new-p-price" step="0.01" required placeholder="0.00">
+                </div>
+                <div class="input-group">
+                    <label>Image URL</label>
+                    <input type="url" id="new-p-img" required placeholder="https://images.unsplash.com/...">
+                </div>
+                <div class="input-group">
+                    <label>Initial Stock</label>
+                    <input type="number" id="new-p-stock" required min="1" value="10">
+                </div>
+                <button type="submit" class="btn btn-block">Add Product</button>
+            </form>
+        </div>
+
+        <hr style="border:0; border-top:1px solid var(--border-color); margin: 1.5rem 0;">
+
+        <div class="admin-sidebar-card">
+            <h4><i class="fas fa-boxes"></i> Stock Management</h4>
+            <div class="table-responsive">
+                <table class="stock-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stock-table-body">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    <div class="modal-overlay" id="edit-modal">
+        <div class="modal">
+            <button class="close-modal" id="close-edit-modal"><i class="fas fa-times"></i></button>
+            <h3><i class="fas fa-edit"></i> Edit Product & Stock</h3>
+            <form id="edit-product-form">
+                <input type="hidden" id="edit-p-id">
+                <div class="input-group">
+                    <label>Product Name</label>
+                    <input type="text" id="edit-p-name" required>
+                </div>
+                <div class="input-group">
+                    <label>Price ($)</label>
+                    <input type="number" id="edit-p-price" step="0.01" required>
+                </div>
+                <div class="input-group">
+                    <label>Stock Quantity</label>
+                    <input type="number" id="edit-p-stock" required min="0">
+                </div>
+                <button type="submit" class="btn submit-pay-btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./sell.js"></script>
+
+</body>
+</html>
